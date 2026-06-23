@@ -1,0 +1,8 @@
+# Garante que a pasta de avatares existe
+mkdir -p ~/aiwa-playbook/avatares/
+
+# Move e renomeia os arquivos usando os caminhos corretos do seu Android
+mv /storage/emulated/0/Download/Bruno_Promotor_Aiwa.png ~/aiwa-playbook/avatares/bruno.jpg
+mv /storage/emulated/0/Download/Cristiane_cliente.png ~/aiwa-playbook/avatares/cristiane.jpg
+mv /storage/emulated/0/Download/Edy_Vendedor.jpg ~/aiwa-playbook/avatares/edy.jpg
+mv /storage/emulated/0/Download/Fernanda_amiga.jpg ~/aiwa-playbook/avatares/fernanda.jpg

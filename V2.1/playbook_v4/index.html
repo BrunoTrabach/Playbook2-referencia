@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Playbook Aiwa v4</title><link rel="stylesheet" href="assets/tailwind.css"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#E30613"></head><body>
+<header class="sticky top-0 bg-[#E30613] text-white"><div class="max-w-6xl mx-auto px-4"><div class="flex items-center h-14 gap-3">
+<div class="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center" id="hora">--:--</div>
+<h1 class="font-semibold">Playbook Aiwa</h1></div></div></header>
+<main class="max-w-3xl mx-auto p-6">
+<div class="bg-white p-8 rounded-2xl shadow text-center">
+<h2 class="font-bold mb-3">Bem-vindo, Bruno</h2>
+<p class="text-gray-600">3 Pilares • Tecnologias • Histórias</p>
+<div class="grid grid-cols-2 gap-2 mt-4">
+<a href="tecnologias.html" class="bg-gray-50 p-3 rounded-xl">Tecnologias</a>
+<a href="sobre.html" class="bg-gray-50 p-3 rounded-xl">Sobre</a>
+</div></div></main>
+<footer class="text-center text-xs text-gray-500 py-5">Desenvolvido por Bruno Trabach - Playbook v4 🇧🇷🇯🇵</footer>
+<script>
+function atualizaHora(){
+  try{
+    const hora = new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',hour:'2-digit',minute:'2-digit'}).format(new Date());
+    document.getElementById('hora').textContent = hora;
+  }catch(e){document.getElementById('hora').textContent = new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});}
+}
+atualizaHora(); setInterval(atualizaHora,60000);
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js');}
+</script></body></html>

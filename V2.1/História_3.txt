@@ -1,0 +1,71 @@
+SIMULAÇÃO 3 - Cliente traz indicação
+Sábado.
+- Cristiane volta com a amiga Fernanda.
+
+[ETAPA: Chegada com indicação]
+
+Cristiane: Olá Edy! Cheguei. Essa é a Fernanda, minha amiga do churrasco, não falei que viria com ela aqui.
+
+Edy: Oi Cristiane, olá Fernanda, sejam bem-vindas. O Bruno tá aqui também, vou chamar ele.
+
+Edy: Bruno Chega ai, apresenta a Boombox para a Amiga da nossa Cliente Cristiane.
+
+PROMOTOR (Bruno): Fala ai Edy! Ei Cristiane, olá Fernanda tudo bem com vocês. O Edy me disse que você passou aqui outro dia e ele te ajudou sobre o TWS.
+
+Cristiane: Sim eu estava passando aqui perto e passei pra dar um oi a aproveitei pra tirar uma dúvida que ele me ajudou muito, e eu trouxe minha amiga pra comprar uma pra ela também, pode mostrar a Aiwa pra ela também?
+Esta aqui é minha amiga Fernanda, este é o Bruno Promotor da Aiwa.
+
+PROMOTOR: Com certeza, vou mostrar agora. Olá Fernanda Tudo Bem? Você esta pensando em uma caixa para utilizar, em casa, pra alguma festa ou pra utilizar em praia?
+
+Fernanda: No meu caso eu não quero pra festa, quero pra academia e pra levar para praia pra relaxar.
+
+[ETAPA: Identificando necessidade - UX]
+
+PROMOTOR: Perfeito, depois de uma semana de correria de trabalho, nada melhor que relaxar um pouco. Na academia você curte uma música com mais grave ou um som mais limpo, algo ambiente?
+
+FERNANDA: Mais limpo, talvez algo mais agitado. Na praia eu quero algo que não estrague com areia.
+
+PROMOTOR: Então a Boombox te atenderá perfeitamente. Vou te mostrar ela igual fiz com a Cristiane.
+
+[ETAPA: Demonstração com prova social]
+
+Edy: Vamos fazer o teste que a Cristiane viu. [pega duas Boombox da loja, neste caso vamossupor que temos duas em exposição] Olha o TWS.
+
+PROMOTOR: Conecta seu celular, Fernanda. Coloca aquela musica da playlist que você cotuma usar para treinar.
+
+FERNANDA: Nossa, pareou as duas?[conecta]
+
+Edy: Isso. Uma fica de cada lado. Fica estéreo.
+
+PROMOTOR: Isso mesmo, imagina uma cena de uma avião passando de um lado para o outro na tela da tv, você ira escutar o som estéreo como se estivesse realmente passando como na cena.
+e ainda ela soma a potência das duas caixas, então voce passa a ter 400W que pura qualidade.
+
+Cristiane: Viu? Foi isso que eu te falei.
+
+[ETAPA: Conexão emocional + diferencial]
+
+PROMOTOR: E você faou de ir na praia, ela tem proteção que permite que porssa ir napraia sem preocupação e o IP66? Areia da praia não entra. Fecha a tampinha, depois é só passar água doce.
+
+FERNANDA: E a bateria? Eu fico 2 horas na academia.
+
+PROMOTOR: Você tem em media 30h no volume médio, vai ficar dias sem ter que recarregar. Talvez cerregue ela uma ou duas vezs na semana, vai depender do seu uso e do volume.
+
+PROMOTOR: E pode utilizar a carga da Boombox para carrega seu celular quando precisar. Igual a Cristiane aprendeu aqui.
+
+[ETAPA: Fechamento natural]
+
+FERNANDA: Quanto tá? A C.1 tá quase mil a mais.
+
+Edy: Essa sai bem mais em conta, com garantia de Aiwa. Quer levar hoje?
+
+FERNANDA: Quero. Vou levar igual a dela.
+
+PROMOTOR: Execelente escolha. Cristiane, valeu pela indicação.
+
+Cristiane: Imagina. Agora a gente faz o treino juntas.
+
+Edy: Vou lá no caixa fechar pra você, Fernanda. Bruno pode pegar a Boombox pra ela enquanto tiro pedido dela?
+
+PROMOTOR: Claro, aqui esta a caixa dela, Qualquer dúvida pode passar aqui que eu ou o vendedor podemos te ajudar. Bem-vinda a família Aiwa.
+Vou acompanhar voces duas até a porta ok, parabéns pela compra, volte sempre.
+

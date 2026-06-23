@@ -1,0 +1,242 @@
+/* Reset e Comportamento Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    text-decoration: none;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Paleta Fusão: Alta Tecnologia (Modo Escuro Padrão) */
+:root, [data-theme="dark"] {
+    --bg-app: #050a18;
+    --bg-card: #0c1530;
+    --bg-topbar: #090f24;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --border-default: rgba(255, 255, 255, 0.07);
+    --bg-input: #0e1a3a;
+
+    /* Cores de Destaque Neon Premium */
+    --neon-red: #ff3b30;
+    --neon-orange: #ff7a00;
+    --neon-blue: #00b2ff;
+    --neon-purple: #bd00ff;
+    --neon-cyan: #00ffcc;
+    --neon-yellow: #ffcc00;
+    --glow-effect: rgba(255, 255, 255, 0.02);
+}
+
+/* Paleta Fusão: Design Comercial Clean (Modo Claro) */
+[data-theme="light"] {
+    --bg-app: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-topbar: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --border-default: rgba(15, 23, 42, 0.08);
+    --bg-input: #f8fafc;
+
+    /* Ajuste de saturação para o fundo claro */
+    --neon-red: #e30613;
+    --neon-orange: #ea580c;
+    --neon-blue: #0284c7;
+    --neon-purple: #9333ea;
+    --neon-cyan: #0d9488;
+    --neon-yellow: #ca8a04;
+    --glow-effect: rgba(0, 0, 0, 0.02);
+}
+
+body {
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Estrutura de Topbar Padrão AIWA */
+.topbar {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 56px;
+    background-color: #E30613;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.logo-area { display: flex; align-items: center; gap: 10px; }
+.logo-area h1 { color: #ffffff; font-size: 16px; font-weight: 900; letter-spacing: 0.5px; }
+
+.back-btn {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2); color: #ffffff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: bold; border: none; cursor: pointer;
+}
+.back-btn:active { transform: scale(0.9); }
+
+.controls-area { display: flex; align-items: center; gap: 10px; }
+.icon-control-btn {
+    background: rgba(255, 255, 255, 0.2); border: none;
+    width: 32px; height: 32px; border-radius: 50%; color: #ffffff;
+    cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+
+.status-indicator {
+    width: 8px; height: 8px; background-color: #00ff66; border-radius: 50%;
+    box-shadow: 0 0 8px #00ff66;
+}
+
+/* Containers Layout */
+.app-container { padding-top: 72px; padding-bottom: 66px; flex: 1; display: flex; flex-direction: column; }
+.content-wrapper { padding: 0 14px; max-width: 760px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+.welcome-header { margin-bottom: 4px; }
+.welcome-header h2 { font-size: 18px; font-weight: 800; color: var(--text-primary); letter-spacing: -0.3px; }
+.live-ticker { font-size: 10px; color: var(--neon-blue); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+
+/* Grid de Módulos (Baseado na fusão de Cards Limpos com Bordas Ativas) */
+.cyber-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.fusion-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px var(--glow-effect);
+}
+.fusion-card::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+    background-color: var(--border-color, var(--border-default));
+}
+.fusion-card:active { transform: scale(0.98); }
+
+/* Atribuição de Cores das Bordas Laterais dos Módulos */
+.card-cyan { --border-color: var(--neon-cyan); }
+.card-purple { --border-color: var(--neon-purple); }
+.card-orange { --border-color: var(--neon-orange); }
+.card-blue { --border-color: var(--neon-blue); }
+.card-yellow { --border-color: var(--neon-yellow); }
+.card-red { --border-color: var(--neon-red); }
+
+.card-title { font-size: 13px; font-weight: 700; text-transform: uppercase; tracking: 0.5px; color: var(--text-primary); }
+.card-desc { font-size: 11px; color: var(--text-secondary); margin-top: 4px; line-height: 1.4; }
+
+/* Interface de Comparativos Avançada (Estilo App Comercial) */
+.fusion-select {
+    background-color: var(--bg-input); color: var(--text-primary);
+    border: 1px solid var(--border-default); padding: 10px 14px;
+    border-radius: 8px; width: 100%; font-size: 13px; font-weight: 600;
+    outline: none; appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%237e8da4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;
+}
+
+.compare-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-default); }
+.compare-table th { background-color: var(--bg-topbar); color: var(--text-secondary); font-weight: 700; padding: 12px; text-transform: uppercase; font-size: 10px; letter-spacing: 0.5px; }
+.compare-table td { padding: 12px; border-bottom: 1px solid var(--border-default); background-color: var(--bg-card); color: var(--text-primary); }
+.compare-table tr:last-child td { border-bottom: none; }
+
+/* Sistema de Chat e Diálogos com Avatares Modificados */
+.chat-viewport { background: var(--bg-input); border: 1px solid var(--border-default); padding: 14px; border-radius: 12px; display: flex; flex-direction: column; gap: 14px; }
+.chat-msg { display: flex; gap: 12px; max-width: 88%; align-items: flex-start; }
+.chat-msg.left { align-self: flex-start; }
+.chat-msg.right { align-self: flex-end; flex-direction: row-reverse; }
+
+.chat-avatar { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--border-default); overflow: hidden; flex-shrink: 0; background-color: var(--bg-card); }
+.chat-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.bubble { background: var(--bg-card); color: var(--text-primary); padding: 12px 16px; border-radius: 12px; font-size: 13px; line-height: 1.5; border: 1px solid var(--border-default); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+.chat-msg.left .bubble { border-left: 4px solid var(--neon-red); border-top-left-radius: 2px; }
+.chat-msg.right .bubble { border-right: 4px solid var(--neon-blue); border-top-right-radius: 2px; }
+.sender-tag { font-size: 10px; color: var(--text-secondary); font-weight: 700; margin-bottom: 4px; display: block; text-transform: uppercase; letter-spacing: 0.3px; }
+
+/* Menu de Navegação Inferior Fixo */
+.nav-menu { position: fixed; bottom: 0; left: 0; width: 100%; height: 56px; background-color: var(--bg-topbar); border-top: 1px solid var(--border-default); display: flex; justify-content: space-around; align-items: center; z-index: 1000; box-shadow: 0 -2px 10px rgba(0,0,0,0.05); }
+.nav-btn { color: var(--text-secondary); font-size: 10px; text-align: center; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 500; }
+.nav-btn div { font-size: 18px; margin-bottom: 1px; }
+.nav-btn.active { color: #E30613; font-weight: 700; }
+
+@media (min-width: 600px) { .cyber-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* --- Extensão de Engenharia e Matriz de Comparativos Adaptativos --- */
+.compare-table th, .compare-table td {
+    min-width: 110px; /* Garante tamanho mínimo legível para as colunas das marcas */
+    vertical-align: top;
+    line-height: 1.3;
+}
+
+/* Coluna fixa de critérios com destaque neon blue */
+.compare-table th:first-child, .compare-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--bg-card);
+    z-index: 2;
+    min-width: 85px;
+    font-weight: bold;
+    color: var(--accent-blue);
+    border-right: 2px solid var(--border-color);
+}
+
+.compare-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="light"] .compare-table tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* Destaque para dados da AIWA */
+.aiwa-cell-highlight {
+    background: rgba(0, 210, 255, 0.05) !important;
+    font-weight: 500;
+}
+[data-theme="light"] .aiwa-cell-highlight {
+    background: rgba(0, 102, 204, 0.05) !important;
+}
+
+/* Acordeon de Tecnologias estruturado */
+.tech-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tech-item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tech-trigger {
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.tech-content {
+    display: block;
+    padding: 0 12px 12px 12px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
